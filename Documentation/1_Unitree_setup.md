@@ -1,5 +1,10 @@
 # **Unitree setup**
 
+The Unitree robot:
+| Default pose | Standing pose |
+|:------------:|:-------------:|
+| ![](../Documentation/Images/unitree_g1.png) | ![](../Documentation/Images/unitree_g1_up.png) |
+
 - In Host PC, clone the repository and run the setup script to set up your workspace:
 
 ```bash
@@ -21,4 +26,9 @@ bash Documentation/Files/scripts/setup_workspace.sh
 ```bash
 colcon build --symlink-install
 ```
+- Launch the robot description and RViz:
 
+```bash
+ros2 launch my_g1_description display_g1.launch.py
+```
+![G1 RViz](../Documentation/Images/g1_rviz.png)
