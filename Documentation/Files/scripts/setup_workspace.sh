@@ -1,7 +1,8 @@
 #!/bin/bash
 set -e
 
-WORKSPACE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+WORKSPACE_DIR="$(cd "${SCRIPT_DIR}/../../.." && pwd)"
 
 cd "$WORKSPACE_DIR"
 
@@ -9,8 +10,8 @@ echo "=== Sourcing ROS2 Humble ==="
 source /opt/ros/humble/setup.bash
 
 echo "=== Installing basic tools ==="
-sudo apt update
-sudo apt install -y \
+apt update
+apt install -y \
   git \
   python3-vcstool \
   python3-rosdep \
@@ -21,7 +22,7 @@ sudo rosdep init 2>/dev/null || true
 rosdep update || true
 
 echo "=== Importing Unitree repositories ==="
-vcs import . < unitree_g1.repos
+vcs import . < "${SCRIPT_DIR}/unitree_g1.repos"
 
 echo "=== Installing ROS dependencies ==="
 rosdep install --from-paths src --ignore-src -r -y || true
