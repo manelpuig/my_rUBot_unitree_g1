@@ -31,6 +31,7 @@ rosdep install --from-paths src --ignore-src -r -y || true
 echo "=== Building workspace ignoring duplicated packages"
 touch src/unitree_mujoco/example/cpp/COLCON_IGNORE
 touch src/unitree_mujoco/COLCON_IGNORE
+touch src/unitree_ros/COLCON_IGNORE
 colcon build --symlink-install
 
 echo "=== Done ==="
