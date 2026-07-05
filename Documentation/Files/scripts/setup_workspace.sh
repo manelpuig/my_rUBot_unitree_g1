@@ -15,7 +15,8 @@ apt install -y \
   git \
   python3-vcstool \
   python3-rosdep \
-  python3-colcon-common-extensions
+  python3-colcon-common-extensions \
+  ros-humble-rosidl-generator-dds-idl
 
 echo "=== Initializing rosdep if needed ==="
 sudo rosdep init 2>/dev/null || true
@@ -27,7 +28,9 @@ vcs import . < "${SCRIPT_DIR}/unitree_g1.repos"
 echo "=== Installing ROS dependencies ==="
 rosdep install --from-paths src --ignore-src -r -y || true
 
-echo "=== Building workspace ==="
+echo "=== Building workspace ignoring duplicated packages"
+touch src/unitree_mujoco/example/cpp/COLCON_IGNORE
+touch src/unitree_mujoco/COLCON_IGNORE
 colcon build --symlink-install
 
 echo "=== Done ==="
