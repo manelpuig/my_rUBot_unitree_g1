@@ -1,7 +1,7 @@
 services:
   pc-humble:
     image: manelpuig/ros2-humble-ub-biorob:latest
-    container_name: pc_humble
+    container_name: pc_humble_unitree
 
     privileged: true
     network_mode: host
@@ -13,13 +13,6 @@ services:
     environment:
       - RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
       - ROS_DOMAIN_ID=5 # ⚠️ numero del grup/robot (1,2,3,4)
-
-      # --- Robust pair-only networking ---
-      - ROS_AUTOMATIC_DISCOVERY_RANGE=OFF
-      - ROS_STATIC_PEERS=192.168.1.54   # ⚠️ IP del robot (14,24,34,44)
-
-      # CycloneDDS XML (PC side)
-      - CYCLONEDDS_URI=file:///config/cyclonedds_pc.xml
 
       # X11 / rendering
       - DISPLAY=${DISPLAY} #Ubuntu
