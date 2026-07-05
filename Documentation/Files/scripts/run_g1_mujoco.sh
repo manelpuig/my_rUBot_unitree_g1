@@ -6,6 +6,13 @@ WORKSPACE_DIR="$(cd "${SCRIPT_DIR}/../../.." && pwd)"
 
 cd "$WORKSPACE_DIR/src/unitree_mujoco/simulate/build"
 
+unset AMENT_PREFIX_PATH
+unset COLCON_PREFIX_PATH
+unset ROS_PACKAGE_PATH
+unset ROS_DISTRO
+unset ROS_VERSION
+unset ROS_PYTHON_VERSION
+
 export LD_LIBRARY_PATH="/usr/local/lib:../mujoco/lib"
 
 ./unitree_mujoco -r g1 -s scene_29dof.xml -i 0 -n lo
