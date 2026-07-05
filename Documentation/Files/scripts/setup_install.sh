@@ -6,6 +6,7 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 bash "${SCRIPT_DIR}/install_ros2_dependencies.sh"
 bash "${SCRIPT_DIR}/import_unitree_repos.sh"
 bash "${SCRIPT_DIR}/install_unitree_mujoco.sh"
+bash "${SCRIPT_DIR}/install_unitree_sdk.sh"
 bash "${SCRIPT_DIR}/build_ros2_workspace.sh"
 
 echo "=== Done ==="

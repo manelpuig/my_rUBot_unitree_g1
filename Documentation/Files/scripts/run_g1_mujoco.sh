@@ -8,4 +8,4 @@ cd "$WORKSPACE_DIR/src/unitree_mujoco/simulate/build"
 
 export LD_LIBRARY_PATH="../mujoco/lib:${LD_LIBRARY_PATH}"
 
-./unitree_mujoco -r g1 -s scene_29dof.xml
+./unitree_mujoco -r g1 -s scene_29dof.xml -i 0 -n lo

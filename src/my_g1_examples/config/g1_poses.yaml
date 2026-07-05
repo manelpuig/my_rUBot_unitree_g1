@@ -1,0 +1,33 @@
+stand:
+  kp: 80.0
+  kd: 4.0
+  joints:
+    left_hip_pitch: -0.35
+    left_hip_roll: 0.00
+    left_hip_yaw: 0.00
+    left_knee: 0.70
+    left_ankle_pitch: -0.35
+    left_ankle_roll: 0.00
+    right_hip_pitch: -0.35
+    right_hip_roll: 0.00
+    right_hip_yaw: 0.00
+    right_knee: 0.70
+    right_ankle_pitch: -0.35
+    right_ankle_roll: 0.00
+    waist_yaw: 0.00
+    waist_roll: 0.00
+    waist_pitch: -0.10
+    left_shoulder_pitch: 0.10
+    left_shoulder_roll: 0.20
+    left_shoulder_yaw: 0.00
+    left_elbow: 0.40
+    left_wrist_roll: 0.00
+    left_wrist_pitch: 0.00
+    left_wrist_yaw: 0.00
+    right_shoulder_pitch: 0.10
+    right_shoulder_roll: -0.20
+    right_shoulder_yaw: 0.00
+    right_elbow: 0.40
+    right_wrist_roll: 0.00
+    right_wrist_pitch: 0.00
+    right_wrist_yaw: 0.00
