@@ -13,20 +13,20 @@ git clone https://github.com/github_user/my_rUBot_unitree_g1/unitree_g1.git
 cd Documentation/Files/Docker_Humble
 docker compose up
 ````
+> Verify the `docker-compose.yaml` is in LF attribute and `entrypoint_pc.yaml` is executable
 
 - In Docker Container, clone the repository and run the setup script to set up your workspace:
 
 ```bash
 git clone https://github.com/github_user/my_rUBot_unitree_g1/unitree_g1.git
 cd unitree_g1
-chmod +x Documentation/Files/scripts/*.sh
-bash Documentation/Files/scripts/setup_install.sh
+chmod +x Documentation/Files/Install_scripts/*.sh
+bash Documentation/Files/Install_scripts/setup_install.sh
 ```
-- Compile:
+> This will take 12 min
 
-```bash
-colcon build --symlink-install
-```
+- Compilation is made in the previous step:
+
 - Launch the robot description and RViz:
 
 ```bash
